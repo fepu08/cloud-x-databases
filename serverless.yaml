@@ -1,0 +1,25 @@
+service: cart-service
+frameworkVersion: '3'
+
+useDotenv: true
+plugins:
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-central-1
+  stage: dev
+
+functions:
+  main:
+    handler: dist/cartHandler.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+          cors: true
+      - http:
+          method: ANY
+          path: '{proxy+}'
+          cors: true
