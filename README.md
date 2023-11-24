@@ -1,3 +1,20 @@
+# Install
+
+## Seeding the database
+
+There are 3 sql scripts inside `./src/sql-scripts`:
+
+- `create-enums.sql`: for creating enums
+- `create-tables.sql`: for creating tables
+- `populate-db.sql`: for populating the database
+
+You can run these scripts by `npm run seed`. You may see an error if enums are already exists but this should not affect the other 2 scripts
+
+- `create-tables.sql`: checks table existence
+- `populate-db.sql`: creates duplicated instances if you already have them
+
+# About nest
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -6,7 +23,7 @@
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
-  
+
   <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -72,4 +89,4 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## License
 
-  Nest is [MIT licensed](LICENSE).
+Nest is [MIT licensed](LICENSE).
